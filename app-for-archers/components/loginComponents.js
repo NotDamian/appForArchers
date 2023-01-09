@@ -13,7 +13,7 @@ export default function login() {
     const [error, setError] = useState(null);
     const router = useRouter();
 
-
+    const { login, signup, currentUser } = useAuth()
 
     function handleLogOut(e) {
         e.preventDefault();
@@ -27,8 +27,14 @@ export default function login() {
             });
     }
 
-    function logInHandler(e) {
+    async function onSubmit(e) {
+        e.preventDefault();
         alert('login')
+        if (!email || !password) {
+            setError('Please enter email and password')
+            return
+        }
+        await login(email, password)
     }
 
 
@@ -44,7 +50,7 @@ export default function login() {
             </form>
 
             <div className='w-100 d-flex justify-content-center mt-5'>
-                <form className='h-100'>
+                <form onClick={onSubmit} className='h-100'>
                     <fieldset className='d-flex flex-column justify-content-center align-items-center w-100'>
                         <h2>Zaloguj się</h2>
 
@@ -64,7 +70,7 @@ export default function login() {
                         </div>
 
                         {/* <!-- button --> */}
-                        <button type="submit" onClick={logInHandler} className="btn btn-primary btn-block mb-3 mt-3 w-75">Zaloguj się</button>
+                        <button type="submit" className="btn btn-primary btn-block mb-3 mt-3 w-75">Zaloguj się</button>
                         <p className='small'><Link className="nav-link text-decoration-underline" href="/">Wróc na strone główną</Link> lub <Link className="nav-link text-decoration-underline" href="/register">Zarejestuj się</Link></p>
 
                     </fieldset>

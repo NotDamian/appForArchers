@@ -158,3 +158,57 @@ export function AuthProvider({ children }) {
 export function useAuth() {
     return useContext(AuthContext)
 }
+
+
+
+
+
+return (
+    <div className='container d-flex flex-column w-100'>
+
+        <div>
+            <h3>Pierwsza odległość</h3>
+            <div className='border'></div>
+
+            <div className='odlegloscPierwsza'>
+                <label className='form-label mt-2'>Seria 1</label>
+                <div className='d-flex flex-row'>
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                </div>
+
+                <label className='form-label mt-2'>Seria 2</label>
+                <div>
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                </div>
+
+                <label className='form-label mt-2'>Seria 3</label>
+                <div>
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                </div>
+
+                <label className='form-label mt-2'>Seria 4</label>
+                <div>
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                </div>
+
+                <label className='form-label mt-2'>Seria 5</label>
+                <div>
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                </div>
+
+                <label className='form-label mt-2'>Seria 6</label>
+                <div>
+                    <input type="number" className="form-control w-25" aria-describedby="emailHelp" placeholder="0-10" />
+                </div>
+            </div>
+
+        </div>
+
+        <button type="submit" onClick={nextBtnFn} className="btn btn-primary btn-block mb-3 mt-3 w-75">{!isEnd ? 'Nastepna seria' : 'Koniec'}</button>
+    </div>
+)

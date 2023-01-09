@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-
+import { AuthProvider, useAuth } from '../context/AuthContext'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect } from 'react'
 
@@ -9,5 +9,9 @@ export default function App({ Component, pageProps }) {
     import('bootstrap/dist/js/bootstrap');
   }, []);
 
-  return <Component {...pageProps} />
+  return (
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  )
 }
