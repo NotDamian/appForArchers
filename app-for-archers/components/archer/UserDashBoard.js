@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import DodajWynik from './DodajWynik'
-import Header from './Header'
-import NavArcher from './NavArcher'
-import WynikCard from './WynikCard'
+import NavArcher from '../nav/NavArcher'
+
 
 export default function UserDashBoard() {
     const [addWynik, setAddWynik] = useState(null);
@@ -12,8 +10,7 @@ export default function UserDashBoard() {
         <>
             <NavArcher></NavArcher>
             <div className='container d-flex flex-row justify-content-center m-3'>
-                {/* <WynikCard></WynikCard> */}
-                {!addWynik && <DodajWynik></DodajWynik>}
+                tu bedzie kalendarz? wyniki?
             </div>
         </>
     )

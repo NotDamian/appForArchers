@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import mainPageStyle from '../styles/mainPageStyle.module.css'
+import mainPageStyle from '../../styles/mainPageStyle.module.css'
 import Link from 'next/link'
 
 export default function mainPageJoin() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import mainPageStyle from '../styles/mainPageStyle.module.css'
+import mainPageStyle from '../../styles/mainPageStyle.module.css'
 import Script from 'next/script'
 
 export default function mainPageSectionTwo() {

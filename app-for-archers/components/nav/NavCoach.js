@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../../context/AuthContext'
 import { signOut } from 'firebase/auth'
-import { auth } from "../firebase";
+import { auth } from "../../firebase";
 
 export default function NavCoach() {
 

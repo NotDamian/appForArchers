@@ -29,6 +29,13 @@ export default function RegisterComponents() {
         await signup(email, password)
     }
 
+    function checkIsLogIn() {
+        if (currentUser) {
+            router.push('/dashboard');
+        }
+    }
+    checkIsLogIn();
+
     return (
         <div>
             <Header></Header>

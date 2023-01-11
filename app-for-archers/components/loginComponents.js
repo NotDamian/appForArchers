@@ -15,18 +15,6 @@ export default function login() {
 
     const { login, signup, currentUser } = useAuth()
 
-    function handleLogOut(e) {
-        e.preventDefault();
-        signOut(auth)
-            .then(() => {
-                console.log("you are logged out");
-                router.push("/");
-            })
-            .catch((error) => {
-                // An error happened.
-            });
-    }
-
     async function onSubmit(e) {
         e.preventDefault();
         alert('login')
@@ -37,18 +25,16 @@ export default function login() {
         await login(email, password)
     }
 
-
+    function checkIsLogIn() {
+        if (currentUser) {
+            router.push('/dashboard');
+        }
+    }
+    checkIsLogIn();
 
     return (
         <>
             <Header></Header>
-
-            <form onSubmit={handleLogOut}>
-                <button className="bg-teal-800 w-full mt-2 tracking-wide p-1 focus:outline-none rounded-xl font-bold text-teal-50 text-center">
-                    Logout
-                </button>
-            </form>
-
             <div className='w-100 d-flex justify-content-center mt-5'>
                 <form onClick={onSubmit} className='h-100'>
                     <fieldset className='d-flex flex-column justify-content-center align-items-center w-100'>

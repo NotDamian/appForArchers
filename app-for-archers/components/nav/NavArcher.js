@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../../context/AuthContext'
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../../firebase";
 
 export default function NavArcher() {
     const { currentUser } = useAuth()
@@ -34,13 +34,13 @@ export default function NavArcher() {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" href="#section2">Wyniki</Link>
+                                <Link className="nav-link active" href="/userresult">Wyniki</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link active" href="#section3">Aktualności</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" href="#section3">Mój sprzęt</Link>
+                                <Link className="nav-link active" href="/equipment">Mój sprzęt</Link>
                             </li>
                         </ul>
                         <form onSubmit={handleLogOut} className='d-flex'>

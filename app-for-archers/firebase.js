@@ -4,12 +4,12 @@ import { getFirestore } from 'firebase/firestore'
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDxnliXt9SXsF9_uI6_GA9c_tvTLkVEZ_U",
-    authDomain: "app-for-archers.firebaseapp.com",
-    projectId: "app-for-archers",
-    storageBucket: "app-for-archers.appspot.com",
-    messagingSenderId: "609630566517",
-    appId: "1:609630566517:web:06544612a7c67496f9a03c"
+    apiKey: process.env.NEXT_PUBLIC_apiKey,
+    authDomain: process.env.NEXT_PUBLIC_authDomain,
+    projectId: process.env.NEXT_PUBLIC_projectId,
+    storageBucket: process.env.NEXT_PUBLIC_storageBucket,
+    messagingSenderId: process.env.NEXT_PUBLIC_messagingSenderId,
+    appId: process.env.NEXT_PUBLIC_appId
 };
 
 
