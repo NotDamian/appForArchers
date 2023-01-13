@@ -3,15 +3,17 @@ import Link from 'next/link'
 import { useAuth } from '../../context/AuthContext'
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
+import { useRouter } from 'next/router'
 
 export default function NavArcher() {
     const { currentUser } = useAuth()
+    const router = useRouter();
     function handleLogOut(e) {
         e.preventDefault();
+        router.push("/");
         signOut(auth)
             .then(() => {
                 console.log("you are logged out");
-                router.push("/");
             })
             .catch((error) => {
                 // An error happened.

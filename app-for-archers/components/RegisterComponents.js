@@ -22,11 +22,16 @@ export default function RegisterComponents() {
         e.preventDefault()
         alert('guzik działa');
         if (!email || !password) {
-            setError('Please enter email and password')
+            setError('brak meila i hasla')
             return
         }
+        if (email && password === passwordTwo) {
+            await signup(email, password)
 
-        await signup(email, password)
+        } else {
+            setError('zle dane')
+        }
+
     }
 
     function checkIsLogIn() {

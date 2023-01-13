@@ -14,10 +14,7 @@ export default function dashboard() {
     const [archer, setArcher] = useState(null);
     const [define, setDefine] = useState(null);
 
-    const { isDefine, coach } = IsCoach()
-    if (coach == 'archer') {
-        setArcher(true)
-    }
+    const { isDefine, coach, nameAndRole } = IsCoach()
 
 
     const { currentUser } = useAuth()

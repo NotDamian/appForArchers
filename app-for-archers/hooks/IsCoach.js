@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from '../context/AuthContext'
 export default function IsCoach() {
     const [isDefine, setisDefine] = useState(null);
     const [coach, setCoach] = useState(null)
+    const [nameAndRole, setNameAndRole] = useState({})
     const { currentUser } = useAuth()
 
     useEffect(() => {
@@ -16,7 +17,12 @@ export default function IsCoach() {
                 const docSnap = await getDoc(docRef)
                 if (docSnap.exists()) {
                     setisDefine(true)
-                    setCoach(docSnap.data().coach)
+                    setNameAndRole(docSnap.data().IsCoach)
+                    if (docSnap.data().IsCoach.role == 'archer') {
+                        setCoach(false)
+                    } else {
+                        setCoach(true)
+                    }
                 } else {
                     setisDefine(false)
                 }
@@ -25,7 +31,7 @@ export default function IsCoach() {
             }
         }
         checkIsCoach()
-    });
+    },);
 
-    return { isDefine, coach };
+    return { isDefine, coach, nameAndRole };
 }

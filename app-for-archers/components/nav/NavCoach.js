@@ -3,17 +3,18 @@ import Link from 'next/link'
 import { useAuth } from '../../context/AuthContext'
 import { signOut } from 'firebase/auth'
 import { auth } from "../../firebase";
+import { useRouter } from 'next/router'
 
 export default function NavCoach() {
-
+    const router = useRouter();
 
     const { currentUser } = useAuth()
     function handleLogOut(e) {
         e.preventDefault();
+        router.push("/");
         signOut(auth)
             .then(() => {
                 console.log("you are logged out");
-                router.push("/");
             })
             .catch((error) => {
                 // An error happened.
@@ -36,7 +37,10 @@ export default function NavCoach() {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" href="#section2">Zawodnicy</Link>
+                                <Link className="nav-link active" href="/myPlayers">Moi zawodnicy</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active" href="/addArcher">Dodaj zawodnika</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link active" href="#section3">Aktualności</Link>
