@@ -14,9 +14,14 @@ export default function AddArcherCard(props) {
         const userRef = doc(db, 'myPlayers', currentUser.uid)
         const docSnap = await getDoc(userRef)
         if (docSnap.exists()) {
-            if (Object.keys(docSnap.data().archers)[0] == children[0]) {
-                setIsAdded(true)
-            }
+            Object.keys(docSnap.data().archers).map(el => {
+                if (el === children[0]) {
+                    setIsAdded(true)
+
+                }
+            })
+
+
         } else {
             console.log('brak zapisanych zawodnikow')
         }
@@ -33,18 +38,30 @@ export default function AddArcherCard(props) {
             'archers': {
                 [children[0]]: {
                     'name': children[1].IsCoach.name,
-                    'tole': children[1].IsCoach.role,
+                    'role': children[1].IsCoach.role,
                     'userUid': children[0]
                 }
             }
         }, { merge: true })
+
+        const playerRef = doc(db, 'IsCoach', children[0])
+        await setDoc(playerRef, {
+            'IsCoach': {
+                'name': children[1].IsCoach.name,
+                'role': 'archer',
+                'coachUid': currentUser.uid
+            }
+        }, { merge: true })
+
         isMyPlayer()
     }
+
+
     if (children[1].IsCoach.role == 'archer' && !isAdded) {
         return (
             <div key={i} className='border border-dark rounded-3 p-2 m-1 d-flex flex-row justify-content-around align-items-center vw-75 '>
                 <div className='alert alert-dismissible alert-primary w-50'>
-                    <p className='lh-1'>Imie: {children[1].IsCoach.name}</p>
+                    <p className='lh-1'>Imię: {children[1].IsCoach.name}</p>
                     <p className='lh-sm'>Typ konta: {children[1].IsCoach.role}</p>
                     {/* <div>uid: {children[0]}</div> */}
                 </div>

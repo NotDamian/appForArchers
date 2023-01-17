@@ -12,6 +12,9 @@ export default function coachAddArcher() {
     return (
         <>
             <NavCoach></NavCoach>
+            <div className='container d-flex flex-row justify-content-center'>
+                <h2>Dodaj zawodników</h2>
+            </div>
             <div className='container d-flex flex-column justify-content-center '>
                 <div className='d-flex flex-column justify-content-center align-items-center'>
                     {allArcher.map((el, i) => {

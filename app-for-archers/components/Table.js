@@ -21,10 +21,10 @@ export default function Table(props) {
     }
 
     ResultArray = sumArr
-    console.log(props)
-    console.log(children)
-    console.log(tmpChildren)
-    console.log(sumArr)
+    // console.log(props)
+    // console.log(children)
+    // console.log(tmpChildren)
+    // console.log(sumArr)
     return (
         <>
             <div className='d-flex flex-column justify-content-center flex-md-wrap flex-sm-row'>
@@ -35,7 +35,7 @@ export default function Table(props) {
                             <th scope='col'>1</th>
                             <th scope='col'>2</th>
                             <th scope='col'>3</th>
-                            <th scope='col'>Suma<br /> 3strz. </th>
+                            <th scope='col'>Suma<br /> 3 strz. </th>
                             <th scope='col'>pkt<br />Seria</th>
                             <th scope='col'>Suma</th>
                         </tr>
@@ -162,7 +162,7 @@ export default function Table(props) {
                             <th scope='col'>1</th>
                             <th scope='col'>2</th>
                             <th scope='col'>3</th>
-                            <th scope='col'>Suma<br /> 3strz. </th>
+                            <th scope='col'>Suma<br /> 3 strz. </th>
                             <th scope='col'>pkt<br />Seria</th>
                             <th scope='col'>Suma</th>
                         </tr>

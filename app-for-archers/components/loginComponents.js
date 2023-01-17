@@ -56,7 +56,7 @@ export default function login() {
 
                         {/* <!-- button --> */}
                         <button onClick={onSubmit} type="submit" className="btn btn-primary btn-block mb-3 mt-3 w-75">Zaloguj się</button>
-                        <p className='small'><Link className="nav-link text-decoration-underline" href="/">Wróc na strone główną</Link> lub <Link className="nav-link text-decoration-underline" href="/register">Zarejestuj się</Link></p>
+                        <p className='small'><Link className="nav-link text-decoration-underline" href="/">Wróc na stronę główną</Link> lub <Link className="nav-link text-decoration-underline" href="/register">Zarejestuj się</Link></p>
 
                     </fieldset>
                 </form>

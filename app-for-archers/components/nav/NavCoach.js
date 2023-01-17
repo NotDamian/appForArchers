@@ -11,7 +11,7 @@ export default function NavCoach() {
     const { currentUser } = useAuth()
     function handleLogOut(e) {
         e.preventDefault();
-        router.push("/");
+        router.push("/login");
         signOut(auth)
             .then(() => {
                 console.log("you are logged out");
@@ -33,7 +33,7 @@ export default function NavCoach() {
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
-                                <Link className="nav-link active" href="https://archery.pl/">Polski Związek łuczniczy
+                                <Link className="nav-link active" href="https://archery.pl/" target="_blank">Polski Związek Łuczniczy
                                 </Link>
                             </li>
                             <li className="nav-item">
@@ -43,7 +43,7 @@ export default function NavCoach() {
                                 <Link className="nav-link active" href="/addArcher">Dodaj zawodnika</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" href="#section3">Aktualności</Link>
+                                <Link className="nav-link active" href="/msg">Wiadomości</Link>
                             </li>
                         </ul>
                         <form onSubmit={handleLogOut} className='d-flex'>

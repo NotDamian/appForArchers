@@ -46,7 +46,7 @@ export default function RegisterComponents() {
             <Header></Header>
             <form onSubmit={onSubmit} className='w-100 d-flex justify-content-center '>
                 <div className='d-flex flex-column justify-content-center align-items-center w-100'>
-                    <h2>Zarejestruj sie</h2>
+                    <h2>Zarejestruj się</h2>
 
                     {/* <!-- error alert --> */}
                     {error && <div className='bg-danger m-2 p-5 w-75 text-center text-white'>{error}</div>}
@@ -69,7 +69,7 @@ export default function RegisterComponents() {
 
                     {/* <!-- button --> */}
                     <button type="submit" className="btn btn-primary btn-block mb-3 mt-3 w-75">Zarejestruj się</button>
-                    <p className='small'><Link className="nav-link text-decoration-underline" href="/">Wróc na strone główną</Link> lub <Link className="nav-link text-decoration-underline" href="/login">Zaloguj się</Link></p>
+                    <p className='small'><Link className="nav-link text-decoration-underline" href="/">Wróć na stronę główną</Link> lub <Link className="nav-link text-decoration-underline" href="/login">Zaloguj się</Link></p>
 
                 </div>
             </form>

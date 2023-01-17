@@ -10,7 +10,7 @@ export default function NavArcher() {
     const router = useRouter();
     function handleLogOut(e) {
         e.preventDefault();
-        router.push("/");
+        router.push("/login");
         signOut(auth)
             .then(() => {
                 console.log("you are logged out");
@@ -32,14 +32,14 @@ export default function NavArcher() {
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
-                                <Link className="nav-link active" href="https://archery.pl/">Polski Związek łuczniczy
+                                <Link className="nav-link active" href="https://archery.pl/" target="_blank">Polski Związek Łuczniczy
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link active" href="/userresult">Wyniki</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" href="#section3">Aktualności</Link>
+                                <Link className="nav-link active" href="/msg">Wiadomośći</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link active" href="/equipment">Mój sprzęt</Link>

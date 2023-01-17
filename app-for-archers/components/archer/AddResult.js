@@ -160,9 +160,9 @@ export default function AddResult() {
                             <input className="form-check-input" type="radio" value='Słonecznie' checked={weather === 'Słonecznie'} onChange={(e) => setWeather('Słonecznie')} name="weatherRadio" id="optionsRadios1" />
                         </div>
                         <div className='d-flex flex-column align-items-center'>
-                            <p>Słońce za chmurami</p>
+                            <p>Częściowe zachmurzenie</p>
                             <i className="fa-solid fa-cloud-sun m-4 mt-0 fs-1 center"></i>
-                            <input className="form-check-input" type="radio" value='Słońce za chmurami' checked={weather === 'Słońce za chmurami'} onChange={(e) => setWeather('Słońce za chmurami')} name="weatherRadio" id="optionsRadios1" />
+                            <input className="form-check-input" type="radio" value='Częściowe zachmurzenie' checked={weather === 'Częściowe zachmurzenie'} onChange={(e) => setWeather('Częściowe zachmurzenie')} name="weatherRadio" id="optionsRadios1" />
                         </div>
                         <div className='d-flex flex-column align-items-center'>
                             <p>Pochmurno</p>

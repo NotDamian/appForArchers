@@ -58,8 +58,8 @@ export default function Home() {
               i wiele <br />
               <span className={mainPageStyle.highlight}>więcej</span>
             </h1>
-            <p>Włącz appForArchers i zyskaj dziennik łuczniczy, który masz zawsze przy sobie. Koystaj
-              na laptopie, w telefonie lub innym, dowolnym urządzeniu i miej go zawsze przy sobie!</p>
+            <p>Włącz AppForArchers i zyskaj dziennik łuczniczy, który będziesz miał zawsze przy sobie. Korzystaj
+              z niego na laptopie, w telefonie lub innym dowolnym urządzeniu gdzie chcesz i kiedy chcesz.</p>
           </div>
           <div>
             <Image src="/archery-40738_960_720.png" alt="vector archer" height={300} width={300}

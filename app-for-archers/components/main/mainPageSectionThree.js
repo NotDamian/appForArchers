@@ -22,31 +22,31 @@ export default function mainPageSectionThree() {
                         </h2>
                         <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                                Tak. Aplikacja jest w pełni darmowa
+                                Tak, aplikacja jest w pełni darmowa
                             </div>
                         </div>
                     </div>
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingTwo">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Czy aplikacja jest w innych jezykach niz polski?.
+                                Czy aplikacja jest w innych językach niż polski?
                             </button>
                         </h2>
                         <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                                Nie. Aplikacja dostepna jest tylko w jezyku polskim.
+                                Nie, aplikacja dostępna jest tylko w języku polskim.
                             </div>
                         </div>
                     </div>
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingThree">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Jak zacząć kozystac z aplikacji
+                                Jak zacząć korzystać z aplikacji?
                             </button>
                         </h2>
                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                                Naley załoyc konto a nastepnie cieszyc sie z koystania z naszej usługi.
+                                Należy założyć konto, a następnie możesz cieszyć się z korzystania z naszej usługi.
                             </div>
                         </div>
                     </div>

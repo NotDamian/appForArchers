@@ -8,6 +8,7 @@ export default function IsCoach() {
     const [isDefine, setisDefine] = useState(null);
     const [coach, setCoach] = useState(null)
     const [nameAndRole, setNameAndRole] = useState({})
+    const [uidCoach, setUidCoach] = useState('')
     const { currentUser } = useAuth()
 
     useEffect(() => {
@@ -20,6 +21,7 @@ export default function IsCoach() {
                     setNameAndRole(docSnap.data().IsCoach)
                     if (docSnap.data().IsCoach.role == 'archer') {
                         setCoach(false)
+                        setUidCoach(docSnap.data().IsCoach.coachUid)
                     } else {
                         setCoach(true)
                     }
@@ -33,5 +35,5 @@ export default function IsCoach() {
         checkIsCoach()
     },);
 
-    return { isDefine, coach, nameAndRole };
+    return { isDefine, coach, nameAndRole, uidCoach };
 }
