@@ -59,6 +59,8 @@ export default function AddResult() {
         const today = new Date()
         await setDoc(userRef, {
             [data]: {
+                'title': data,
+                'userUic': currentUser.uid,
                 "data": today.getHours() + ":" + today.getMinutes(),
                 'time': today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate(),
                 'wynik': {

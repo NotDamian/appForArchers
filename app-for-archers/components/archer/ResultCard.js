@@ -17,11 +17,11 @@ export default function WynikCard() {
         <>
             <NavArcher></NavArcher>
 
-            <div className='container  mt-1 p-2 d-flex flex-column justify-content-center align-items-center mx-20 w-75'>
+            <div className='container  mt-1 p-2 d-flex flex-column  justify-content-center align-items-center mx-20 '>
                 <div className='m-3'>
                     <Link className=" btn btn-success p-2 nav-link active" href="/useraddresult">Dodaj nowy wynik</Link>
                 </div>
-                {isresult ? (<div className='bg-primary rounded-3 justify-content-around'>
+                {isresult ? (<div className='bg-primary rounded-3 d-flex flex-column justify-content-around '>
 
                     {Object.keys(result).map((k, i) => {
                         return (

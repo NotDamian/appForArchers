@@ -44,6 +44,12 @@ export default function NavArcher() {
                             <li className="nav-item">
                                 <Link className="nav-link active" href="/equipment">Mój sprzęt</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active" href="/statute" target="_blank">Regulamin</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active" href="/clock">Zegar Łuczniczy</Link>
+                            </li>
                         </ul>
                         <form onSubmit={handleLogOut} className='d-flex'>
                             <button className="bg-teal-800 w-full m-2 p-2 tracking-wide p-1 focus:outline-none rounded-xl font-bold text-teal-50 text-center btn btn-success">
