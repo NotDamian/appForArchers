@@ -6,11 +6,13 @@ import { AuthProvider, useAuth } from '../context/AuthContext'
 import Login from './login'
 import Script from 'next/script'
 import MainClock from '../components/MainClock'
+import { useRouter } from 'next/router'
 
 export default function clock() {
     const [start, setStart] = useState(null)
     const [counter, setCounter] = useState(180)
     const [end, setEnd] = useState(null)
+    const router = useRouter()
 
     const { isDefine, coach, nameAndRole } = IsCoach()
     const { currentUser } = useAuth()
@@ -30,20 +32,21 @@ export default function clock() {
         // setEnd(false)
         setCounter(180)
     }
+    ;
 
 
     return (
         <>
             {currentUser && coach ? <NavCoach></NavCoach> : <NavArcher></NavArcher>}
             <div className='container d-flex flex-column justify-content-center align-items-center mb-1'>
-                <div className="container d-flex justify-content-center align-items-center mt-3">
-                    {start ? <MainClock /> : <></>}
-                </div>
                 {start ?
                     <button type="submit" onClick={stopBtn} className="btn btn-primary btn-block mb-3 mt-3 w-100">Stop</button> :
                     <button type="submit" onClick={startBtn} className="btn btn-primary btn-block mb-3 mt-3 w-100">Start</button>}
+                <div className="container d-flex justify-content-center align-items-center mt-3">
+                    {start ? <MainClock /> : <></>}
+                </div>
             </div>
-            {!currentUser && <Login />}
+
         </>
     )
 }

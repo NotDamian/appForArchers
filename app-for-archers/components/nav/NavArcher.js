@@ -32,8 +32,8 @@ export default function NavArcher() {
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
-                                <Link className="nav-link active" href="https://archery.pl/" target="_blank">Polski Związek Łuczniczy
-                                </Link>
+                                <Link className="nav-link active" href="https://archery.pl/" target="_blank">
+                                    Polski Związek Łuczniczy</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link active" href="/userresult">Wyniki</Link>
@@ -52,9 +52,8 @@ export default function NavArcher() {
                             </li>
                         </ul>
                         <form onSubmit={handleLogOut} className='d-flex'>
-                            <button className="bg-teal-800 w-full m-2 p-2 tracking-wide p-1 focus:outline-none rounded-xl font-bold text-teal-50 text-center btn btn-success">
-                                Wyloguj
-                            </button>
+                            <button className="bg-teal-800 w-full m-2 p-2 tracking-wide p-1 focus:outline-none
+                            rounded-xl font-bold text-teal-50 text-center btn btn-success">Wyloguj</button>
                         </form>
                     </div>
                 </div>

@@ -127,6 +127,12 @@ export default function AddResult() {
             setNrOdleglosci("Druga")
             setBtnNext("Następna seria")
         }
+        setI(0)
+        setII(0)
+        setIII(0)
+        setIV(0)
+        setV(0)
+        setVI(0)
     }
     function stageOneNext(e) {
         e.preventDefault()
@@ -154,7 +160,7 @@ export default function AddResult() {
 
                 {stageOne ? <div>
                     <h5>Pogoda:</h5>
-                    <form className='weather w-100 d-flex flex-row justify-content-around'>
+                    <form className='weather w-100 d-flex  flex-sm-row flex-column justify-content-around'>
 
                         <div className='d-flex flex-column align-items-center'>
                             <p>Słonecznie</p>
@@ -239,7 +245,7 @@ export default function AddResult() {
                                 </div>
 
                             </div>
-                            <div><h6>Uzyskane punkty w tej seri: {equalOne}</h6></div>
+
 
 
                             <button type="submit" onClick={nextBtnFn} className="btn btn-primary btn-block mb-3 mt-3 w-100">{btnNext}</button>

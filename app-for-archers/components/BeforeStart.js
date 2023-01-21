@@ -48,7 +48,7 @@ export default function BeforeStart() {
 
                     {/* name */}
                     <div className="form-group ">
-                        <label htmlFor="exampleInputEmail1" className="form-label mt-4">Email</label>
+                        <label htmlFor="exampleInputEmail1" className="form-label mt-4">Imię:</label>
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="form-control" placeholder="Imie i nazwisko" />
                     </div>
                     {/* <!-- choose who y a --> */}

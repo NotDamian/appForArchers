@@ -20,7 +20,7 @@ export default function RegisterComponents() {
 
     async function onSubmit(e) {
         e.preventDefault()
-        alert('guzik działa');
+        // alert('guzik działa');
         if (!email || !password) {
             setError('brak meila i hasla')
             return

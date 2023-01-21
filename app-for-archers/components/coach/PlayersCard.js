@@ -18,29 +18,6 @@ export default function PlayersCard(props) {
     const router = useRouter()
     let tmp = players
 
-    // function moreInfo(e) {
-    //     e.preventDefault()
-    //     getResult()
-    //     console.log('wiecej info')
-    //     console.log(children.userUid)
-    // }
-
-    // async function getResult() {
-
-    //     const docRef = doc(db, 'wyniki', children.userUid)
-    //     const docSnap = await getDoc(docRef)
-    //     if (docSnap.exists()) {
-    //         setResult(docSnap.data())
-    //         setIsResult(true)
-    //     } else {
-    //         setIsResult(false)
-    //     }
-
-    // }
-
-
-
-
     async function deleteFromMyPplayer(e) {
         e.preventDefault()
         console.log('usun')

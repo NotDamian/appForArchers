@@ -57,7 +57,7 @@ export default function Table(props) {
                             <td>{children[0][5]}</td>
                             <td>{+children[0][3] + +children[0][4] + +children[0][5]}</td>
                             <td>{+children[0][0] + +children[0][1] + +children[0][2] + +children[0][3] + +children[0][4] + +children[0][5]}</td>
-                            <td>{sumArr[0]}</td>
+                            <td>{+children[0][0] + +children[0][1] + +children[0][2] + +children[0][3] + +children[0][4] + +children[0][5]}</td>
                         </tr>
                         <tr>
                             <th scope='row'>9</th>
@@ -184,7 +184,7 @@ export default function Table(props) {
                             <td>{children[6][5]}</td>
                             <td>{+children[6][3] + +children[6][4] + +children[6][5]}</td>
                             <td>{+children[6][0] + +children[6][1] + +children[6][2] + +children[6][3] + +children[6][4] + +children[6][5]}</td>
-                            <td>{sumArr[6]}</td>
+                            <td>{+children[6][0] + +children[6][1] + +children[6][2] + +children[6][3] + +children[6][4] + +children[6][5]}</td>
                         </tr>
                         <tr>
                             <th scope='row'>9</th>

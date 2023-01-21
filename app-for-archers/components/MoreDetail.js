@@ -9,7 +9,7 @@ export default function MoreDetail(props) {
                     <p>Samopoczucie przed: {children.wellBeingBefore}, oraz po: {children.wellBeingAfter}</p>
                     <p>Pogoda: {children.weather}</p>
                 </div>
-                <div className='d-flex flex-column justify-content-center flex-wrap flex-sm-row'>
+                <div className='d-flex flex-sm-row flex-column justify-content-center  '>
                     <table className='table table-bordered w-50 mr-5'>
                         <thead>
                             <tr className=''>

@@ -112,7 +112,7 @@ export default function UserEquipment() {
         <>
             <NavArcher></NavArcher>
             <div className='container d-flex flex-column justify-content-center align-items-start w-100 mt-2'>
-                <div className='border border-dark w-100'>
+                <div className='border rounded-3 border-dark w-100'>
                     <div className='viewfinder  d-flex flex-column m-1 p-1'>
                         <div className='d-flex flex-row justify-content-around'>
                             <h4>Celownik:</h4>
