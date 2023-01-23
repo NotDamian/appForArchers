@@ -5,7 +5,7 @@ import NavArcher from '../nav/NavArcher'
 import { AuthProvider, useAuth } from '../../context/AuthContext'
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { db } from '../../firebase'
-import getResult from '../../hooks/getResultUser'
+import getResult from '../../hooks/GetResultUser'
 import GeneralResultCard from '../GeneralResultCard'
 
 export default function WynikCard() {

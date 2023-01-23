@@ -3,7 +3,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { AuthProvider, useAuth } from '../context/AuthContext'
 
-export default function getResultuser() {
+export default function GetResultuser() {
     const [result, setResult] = useState({})
     const [isresult, setIsResult] = useState(null)
 

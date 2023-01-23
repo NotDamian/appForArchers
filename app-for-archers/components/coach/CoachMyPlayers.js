@@ -4,7 +4,7 @@ import { getFirestore, doc, getDocs, collection, getDoc } from 'firebase/firesto
 import { db } from '../../firebase'
 import { AuthProvider, useAuth } from '../../context/AuthContext'
 import PlayersCard from './PlayersCard'
-import getMyPlayers from '../../hooks/getMyPlayers'
+import getMyPlayers from '../../hooks/GetMyPlayers'
 
 export default function CoachMyPlayers() {
     const { userInfo, currentUser } = useAuth()

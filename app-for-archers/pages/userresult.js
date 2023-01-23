@@ -4,7 +4,7 @@ import IsCoach from '../hooks/IsCoach'
 import Login from './login'
 import ResultCard from '../components/archer/ResultCard'
 
-export default function userresult() {
+export default function Userresult() {
     const { isDefine, coach } = IsCoach()
     const { currentUser } = useAuth()
     return (

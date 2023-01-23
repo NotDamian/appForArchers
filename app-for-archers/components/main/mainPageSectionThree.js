@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import mainPageStyle from '../../styles/mainPageStyle.module.css'
 
-export default function mainPageSectionThree() {
+export default function MainPageSectionThree() {
 
     return (
         <section className="section container mt-5 p-4 d-flex flex-column justify-content-around mx-20" id="section3">

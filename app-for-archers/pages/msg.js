@@ -7,7 +7,7 @@ import IsCoach from '../hooks/IsCoach'
 import CoachMsg from '../components/coach/CoachMsg'
 import ArcherMsg from '../components/archer/ArcherMsg'
 
-export default function msg() {
+export default function Msg() {
     const { isDefine, coach, nameAndRole, uidCoach } = IsCoach()
 
 

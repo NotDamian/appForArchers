@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import mainPageStyle from '../../styles/mainPageStyle.module.css'
 import Link from 'next/link'
 
-export default function mainPageJoin() {
+export default function MainPageJoin() {
 
     return (
         <section className="section container mt-5 p-4 d-flex flex-column justify-content-around mx-20 h-75 d-inline-block">

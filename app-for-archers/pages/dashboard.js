@@ -9,10 +9,10 @@ import { db } from '../firebase'
 import IsCoach from '../hooks/IsCoach'
 
 
-export default function dashboard() {
+export default function Dashboard() {
     // const [coach, setCoach] = useState(null)
-    const [archer, setArcher] = useState(null);
-    const [define, setDefine] = useState(null);
+    // const [archer, setArcher] = useState(null);
+    // const [define, setDefine] = useState(null);
 
     const { isDefine, coach, nameAndRole } = IsCoach()
 

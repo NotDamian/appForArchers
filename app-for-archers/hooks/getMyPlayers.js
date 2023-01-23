@@ -3,7 +3,7 @@ import { getFirestore, doc, getDocs, collection, getDoc } from 'firebase/firesto
 import { db } from '../firebase'
 import { AuthProvider, useAuth } from '../context/AuthContext'
 
-export default function getMyPlayers() {
+export default function GetMyPlayers() {
     const { userInfo, currentUser } = useAuth()
     const [players, setPlayers] = useState([])
     const [isPlayers, setIsPlayers] = useState(null)

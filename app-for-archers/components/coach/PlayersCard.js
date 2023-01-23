@@ -45,7 +45,7 @@ export default function PlayersCard(props) {
     return (
         <>
             {!del ?
-                <div key={i} className='border border-dark rounded-3 p-2 m-1 d-flex flex-row justify-content-around align-items-center w-100 '>
+                <div key={i} className='border border-dark rounded-3 p-2 m-1 d-flex flex-row justify-content-around align-items-center w-100'>
                     <div className='w-75'>
                         <p>Imię:  {children.name}</p>
                         {/* <p>Imie:  {children.userUid}</p> */}

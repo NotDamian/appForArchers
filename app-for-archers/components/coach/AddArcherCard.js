@@ -59,7 +59,7 @@ export default function AddArcherCard(props) {
 
     if (children[1].IsCoach.role == 'archer' && !isAdded) {
         return (
-            <div key={i} className='border border-dark rounded-3 p-2 m-1 d-flex flex-row justify-content-around align-items-center vw-75 '>
+            <div key={i} className='border border-dark rounded-3 p-2 m-1 d-flex flex-row justify-content-around align-items-center w-100'>
                 <div className='alert alert-dismissible alert-primary w-50'>
                     <p className='lh-1'>Imię: {children[1].IsCoach.name}</p>
                     <p className='lh-sm'>Typ konta: {children[1].IsCoach.role}</p>

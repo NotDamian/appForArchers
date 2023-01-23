@@ -5,7 +5,7 @@ import { db } from '../firebase'
 import { AuthProvider, useAuth } from '../context/AuthContext'
 import firebase from '../firebase'
 
-export default function getAllArcher() {
+export default function GetAllArcher() {
     const [allArcher, setAllArcher] = useState([])
     const [isresult, setIsResult] = useState(null)
     const tmp = []

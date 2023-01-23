@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
   return (
@@ -6,7 +7,7 @@ export default function Document() {
       <Head>
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
         <link rel="icon" href="../public/favicon.ico" />
-        <script src="https://kit.fontawesome.com/4c93254228.js" crossorigin="anonymous"></script>
+        <Script src="https://kit.fontawesome.com/4c93254228.js" crossorigin="anonymous" />
       </Head>
       {/* <Head /> */}
       <body>

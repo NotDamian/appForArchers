@@ -1,10 +1,10 @@
 import React from 'react'
 import NavCoach from '../nav/NavCoach'
-import getArcher from '../../hooks/getAllArcher'
+import getArcher from '../../hooks/GetAllArcher'
 import AddArcherCard from './AddArcherCard'
 
 
-export default function coachAddArcher() {
+export default function CoachAddArcher() {
 
     const { allArcher } = getArcher()
 

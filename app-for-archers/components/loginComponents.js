@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react'
-import Header from '../components/Header'
+import React, { useState } from 'react'
+import Header from './Header'
 import Link from 'next/link'
 import { useAuth } from '../context/AuthContext'
 import { useRouter } from 'next/router'
@@ -7,21 +7,21 @@ import { useRouter } from 'next/router'
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 
-export default function login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
+export default function LoginComponents() {
+    const [Email, setEmail] = useState('');
+    const [Password, setPassword] = useState('');
+    const [Error, setError] = useState(null);
     const router = useRouter();
 
     const { login, signup, currentUser } = useAuth()
 
     async function onSubmit(e) {
         e.preventDefault();
-        if (!email || !password) {
+        if (!Email || !Password) {
             setError('Please enter email and password')
             return
         }
-        await login(email, password)
+        await login(Email, Password)
     }
 
     function checkIsLogIn() {
@@ -40,18 +40,18 @@ export default function login() {
                         <h2>Zaloguj się</h2>
 
                         {/* <!-- error alert --> */}
-                        {error && <div className='bg-danger m-2 p-5 w-75 text-center text-white'>{error}</div>}
+                        {Error && <div className='bg-danger m-2 p-5 w-75 text-center text-white'>{Error}</div>}
 
                         {/* <!-- email --> */}
                         <div className="form-group ">
                             <label htmlFor="exampleInputEmail1" className="form-label mt-4">Email</label>
-                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            <input type="email" value={Email} onChange={(e) => setEmail(e.target.value)} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                                 placeholder="email@example.com" />
                         </div>
                         {/* <!-- password --> */}
                         <div className="form-group">
                             <label htmlFor="exampleInputPassword1" className="form-label mt-4">Hasło</label>
-                            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" id="exampleInputPassword1" placeholder="Hasło" />
+                            <input type="password" value={Password} onChange={(e) => setPassword(e.target.value)} className="form-control" id="exampleInputPassword1" placeholder="Hasło" />
                         </div>
 
                         {/* <!-- button --> */}
